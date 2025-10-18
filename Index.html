@@ -501,16 +501,16 @@
 
     // Your web app's Firebase configuration
     const firebaseConfig = {
-      apiKey: "AIzaSyDoKgUHGTJhSLpq8ZFnmGuKCznvqhni65s",
+      apiKey: process.env.FIREBASE_API_KEY,
       authDomain: "treackymodz.firebaseapp.com",
       projectId: "treackymodz",
       storageBucket: "treackymodz.firebasestorage.app",
-      messagingSenderId: "935507739869",
+            messagingSenderId: "935507739869",
       appId: "1:935507739869:web:d339ecf3e9cbfa1cdbc734",
       measurementId: "G-TSNVJWTE4K"
     };
 
-        // Initialize Firebase
+    // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
     const db = getFirestore(app);
