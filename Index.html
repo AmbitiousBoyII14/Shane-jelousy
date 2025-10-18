@@ -574,8 +574,10 @@
     const downloadBtn = document.getElementById('downloadBtn');
     if (downloadBtn) {
       downloadBtn.addEventListener('click', async (e) => {
-        // Don't prevent default - let the link work normally
+        console.log('Download button clicked');
+        e.preventDefault(); // Prevent the default link behavior
         await incrementDownloadCount();
+        console.log('Download count incremented');
       });
     }
 
